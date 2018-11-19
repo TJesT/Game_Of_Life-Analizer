@@ -1,4 +1,6 @@
+print()
 size = int(input())
+print()
 space_d = [ [j for j in input()] for i in range(size) ]
 space_n = [ [space_d[i][j] for j in range(size)] for i in range(size) ]
 dead_space = [['x' for j in range(size)] for i in range(size)]
