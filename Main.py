@@ -1,5 +1,8 @@
 import Local
 
+print(Local.RU_EXAMPLE)
+print("5" + "\n" + Local.EXAMPLE_STATE_FOR_YES+ "\n")
+
 while(True):
 	try:
 		print(Local.RU_INPUT_FIELD_SIZE)
