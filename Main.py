@@ -27,13 +27,13 @@ while(True):
     space_d = [ [space_n[i][j] for j in range(size)] for i in range(size) ]
     for state in all_states:
         if (space_d == state):
-            print(Local.RU_YES+"\n%d"%(now))
+            print(Local.RU_YES + "\n%d"%(now))
             flag = True
             break
     if (flag == True):
         break
     if space_d == dead_space:
-        print(Local.RU_NO"\n%d"%(now))
+        print(Local.RU_NO + "\n%d"%(now))
         break
     all_states.append(space_d)
     now += 1
