@@ -2,6 +2,7 @@ import Local
 
 print(Local.RU_EXAMPLE)
 print("5" + "\n" + Local.EXAMPLE_STATE_FOR_YES+ "\n")
+print(Local.RU_RULES)
 
 while(True):
 	try:
