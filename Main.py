@@ -1,7 +1,21 @@
-print()
-size = int(input())
-print()
-space_d = [ [j for j in input()] for i in range(size) ]
+import Local
+
+while(True):
+	try:
+		print(Local.RU_INPUT_FIELD_SIZE)
+		size = int(input())
+		print(Local.RU_INPUT_FIELD)
+		state = list()
+		for i in range(size):
+			state.append(input())
+			if len(state[i]) != size:
+				raise Exception
+	except Exception:
+		print(Local.RU_ERR_FIELD_INPUT+"\n")
+		continue
+	break
+
+space_d = [ [j for j in state[i]] for i in range(size) ]
 space_n = [ [space_d[i][j] for j in range(size)] for i in range(size) ]
 dead_space = [['x' for j in range(size)] for i in range(size)]
 all_states = []
@@ -13,13 +27,13 @@ while(True):
     space_d = [ [space_n[i][j] for j in range(size)] for i in range(size) ]
     for state in all_states:
         if (space_d == state):
-            print("Yes\n%d"%(now))
+            print(Local.RU_YES+"\n%d"%(now))
             flag = True
             break
     if (flag == True):
         break
     if space_d == dead_space:
-        print("No\n%d"%(now))
+        print(Local.RU_NO"\n%d"%(now))
         break
     all_states.append(space_d)
     now += 1
